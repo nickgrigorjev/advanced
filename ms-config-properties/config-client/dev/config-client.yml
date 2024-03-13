@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        service-id: config-server
+
+server:
+  port: 0

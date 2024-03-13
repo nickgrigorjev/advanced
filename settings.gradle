@@ -1,2 +1,8 @@
 rootProject.name = 'advanced'
 
+includeBuild 'eureka-server'
+includeBuild 'eureka-client'
+includeBuild 'config-client'
+includeBuild 'config-server'
+includeBuild 'api-gateway'
+
