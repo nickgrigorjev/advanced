@@ -1,0 +1,23 @@
+server:
+  port: 8085
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    enabled: true
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+spring:
+  application:
+    name: book-service
+  data:
+    mongodb:
+      port: 27017
+#      host: mongodb
+      host: localhost
+      database: book_db
+
+mongock:
+  migration-scan-package:
+    - com.nsgrigorjev.bookservice.changelogs

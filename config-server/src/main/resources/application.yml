@@ -1,0 +1,29 @@
+server:
+  port: 8198
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+  profiles:
+    active: native
+
+#  profiles:
+#    active: git
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/nickgrigorjev/spring-cloud-config-git-repo-example.git
+#          search-paths:
+#            - "ms-config-properties/{application}/{profile}"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    enabled: true
+
