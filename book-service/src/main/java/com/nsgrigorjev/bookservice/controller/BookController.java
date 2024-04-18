@@ -20,13 +20,4 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/book")
-    public Book getFirstBook() {
-        return Book.builder()
-                .id("first")
-                .title("Горе от ума")
-                .description("Описание")
-                .imageLink("https://google.com")
-                .build();
-    }
 }
